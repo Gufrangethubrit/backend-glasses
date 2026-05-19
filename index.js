@@ -46,6 +46,10 @@ app.use(cors({
 app.use(express.json())
 app.use(cookieParser())
 
+app.get("/", (req, res) => {
+  res.send("Backend is live babu");
+});
+
 app.use("/api/auth", authRoutes)
 app.use("/api/user", userRoutes)
 app.use("/api/product", productRoutes)
@@ -61,3 +65,4 @@ app.listen(PORT, () => {
   console.log(` Server is running on port ${PORT}`);
   connectDB();
 });
+

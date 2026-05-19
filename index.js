@@ -20,6 +20,7 @@ const normalizeOrigin = (value) => value?.trim().replace(/\/$/, '')
 
 const allowedOrigins = [
   process.env.FRONTEND_URL,
+  process.env.ADMIN_URL,
   ...(process.env.ALLOWED_ORIGINS?.split(',') || []),
 ]
   .map(normalizeOrigin)

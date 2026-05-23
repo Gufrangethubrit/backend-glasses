@@ -19,6 +19,8 @@ let PORT = process.env.PORT || 5000;
 const normalizeOrigin = (value) => value?.trim().replace(/\/$/, '')
 
 const allowedOrigins = [
+  'https://shop-glasses-zhca.vercel.app',
+  'https://admin-glasses.vercel.app',
   process.env.FRONTEND_URL,
   process.env.ADMIN_URL,
   ...(process.env.ALLOWED_ORIGINS?.split(',') || []),
